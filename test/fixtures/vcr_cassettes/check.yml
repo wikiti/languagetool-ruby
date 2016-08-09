@@ -1,0 +1,161 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://languagetool.org/api/v2/check?language=en-US&text=This%20ish%20an%20correct%20stringg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (linux-gnu x86_64) ruby/2.2.4p230
+      Host:
+      - languagetool.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 11 Aug 2016 16:51:23 GMT
+      Server:
+      - Apache/2.4.7 (Ubuntu)
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '1964'
+    body:
+      encoding: UTF-8
+      string: '{"software":{"name":"LanguageTool","version":"3.5-SNAPSHOT","buildDate":"2016-08-10
+        22:01","apiVersion":"1","status":""},"language":{"name":"English (US)","code":"en-US"},"matches":[{"message":"Possible
+        spelling mistake found","shortMessage":"Spelling mistake","replacements":[{"value":"is"},{"value":"fish"},{"value":"wish"},{"value":"ash"},{"value":"dish"},{"value":"sh"},{"value":"Gish"},{"value":"ssh"},{"value":"ISO"},{"value":"isl"},{"value":"ism"},{"value":"isn"},{"value":"i
+        sh"},{"value":"is h"}],"offset":5,"length":3,"context":{"text":"This ish an
+        correct stringg","offset":5,"length":3},"rule":{"id":"MORFOLOGIK_RULE_EN_US","description":"Possible
+        spelling mistake","issueType":"misspelling","category":{"id":"TYPOS","name":"Possible
+        Typo"}}},{"message":"Use \"a\" instead of ''an'' if the following word doesn''t
+        start with a vowel sound, e.g. ''a sentence'', ''a university''","shortMessage":"Wrong
+        article","replacements":[{"value":"a"}],"offset":9,"length":2,"context":{"text":"This
+        ish an correct stringg","offset":9,"length":2},"rule":{"id":"EN_A_VS_AN","description":"Use
+        of ''a'' vs. ''an''","issueType":"misspelling","category":{"id":"MISC","name":"Miscellaneous"}}},{"message":"Probably
+        a noun is missing in this part of the sentence.","shortMessage":"","replacements":[],"offset":9,"length":10,"context":{"text":"This
+        ish an correct stringg","offset":9,"length":10},"rule":{"id":"DT_JJ_NO_NOUN","subId":"1","description":"Missing
+        noun after an adjective","issueType":"grammar","category":{"id":"GRAMMAR","name":"Grammar"}}},{"message":"Possible
+        spelling mistake found","shortMessage":"Spelling mistake","replacements":[{"value":"string"},{"value":"strings"},{"value":"stringy"},{"value":"string
+        g"}],"offset":20,"length":7,"context":{"text":"This ish an correct stringg","offset":20,"length":7},"rule":{"id":"MORFOLOGIK_RULE_EN_US","description":"Possible
+        spelling mistake","issueType":"misspelling","category":{"id":"TYPOS","name":"Possible
+        Typo"}}}]}'
+    http_version: 
+  recorded_at: Thu, 11 Aug 2016 16:51:23 GMT
+- request:
+    method: get
+    uri: https://languagetool.org/api/v2/check?language=en-US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (linux-gnu x86_64) ruby/2.2.4p230
+      Host:
+      - languagetool.org
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Thu, 11 Aug 2016 16:51:24 GMT
+      Server:
+      - Apache/2.4.7 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '31'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: 'Error: Missing ''text'' parameter'
+    http_version: 
+  recorded_at: Thu, 11 Aug 2016 16:51:24 GMT
+- request:
+    method: get
+    uri: https://languagetool.org/api/v2/check?language=en-US&text=This%20is%20a%20correct%20string
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (linux-gnu x86_64) ruby/2.2.4p230
+      Host:
+      - languagetool.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 11 Aug 2016 16:51:24 GMT
+      Server:
+      - Apache/2.4.7 (Ubuntu)
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '184'
+    body:
+      encoding: UTF-8
+      string: '{"software":{"name":"LanguageTool","version":"3.5-SNAPSHOT","buildDate":"2016-08-10
+        22:01","apiVersion":"1","status":""},"language":{"name":"English (US)","code":"en-US"},"matches":[]}'
+    http_version: 
+  recorded_at: Thu, 11 Aug 2016 16:51:24 GMT
+- request:
+    method: get
+    uri: https://languagetool.org/api/v2/check?text=Incomplete
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.0 (linux-gnu x86_64) ruby/2.2.4p230
+      Host:
+      - languagetool.org
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Thu, 11 Aug 2016 16:51:42 GMT
+      Server:
+      - Apache/2.4.7 (Ubuntu)
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '35'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: 'Error: Missing ''language'' parameter'
+    http_version: 
+  recorded_at: Thu, 11 Aug 2016 16:51:42 GMT
+recorded_with: VCR 3.0.3

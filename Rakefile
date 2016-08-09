@@ -15,13 +15,12 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
   gem.name = "languagetool"
-  gem.homepage = "http://github.com/wikiti/languagetool"
+  gem.homepage = "https://gitlab.com/wikiti-random-stuff/languagetool-ruby"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "wikiti.doghound@gmail.com"
+  gem.summary = %Q{Gem wrapper for the LanguageTool API (public or private)}
+  gem.description = %Q{Gem wrapper for the LanguageTool API (public or private). It allows to correct texts.}
+  gem.email = "info@danielherzog.es"
   gem.authors = ["Daniel Herzog"]
-  # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
 

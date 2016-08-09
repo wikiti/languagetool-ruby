@@ -11,8 +11,8 @@ SimpleCov.configure do
   load_adapter 'test_frameworks'
 end
 
-ENV["COVERAGE"] && SimpleCov.start do
-  add_filter "/.rvm/"
+ENV['COVERAGE'] && SimpleCov.start do
+  add_filter '/.rvm/'
 end
 require 'rubygems'
 require 'bundler'
@@ -20,7 +20,7 @@ begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
   $stderr.puts e.message
-  $stderr.puts "Run `bundle install` to install missing gems"
+  $stderr.puts 'Run `bundle install` to install missing gems'
   exit e.status_code
 end
 require 'test/unit'
@@ -31,4 +31,11 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'languagetool'
 
 class Test::Unit::TestCase
+end
+
+require 'vcr'
+
+VCR.configure do |config|
+  config.cassette_library_dir = 'test/fixtures/vcr_cassettes'
+  config.hook_into :webmock # or :fakeweb
 end
