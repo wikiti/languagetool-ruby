@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     "README.md",
     "Rakefile",
     "VERSION",
+    "languagetool.gemspec",
     "lib/languagetool.rb",
     "lib/languagetool/actions/base.rb",
     "lib/languagetool/actions/check.rb",
