@@ -1,4 +1,8 @@
+[![Gem Version](https://badge.fury.io/rb/languagetool.svg)](https://badge.fury.io/rb/languagetool)[![Dependency Status](https://gemnasium.com/badges/github.com/wikiti/languagetool-ruby.svg)](https://gemnasium.com/github.com/wikiti/languagetool-ruby)[![CircleCI](https://circleci.com/gh/wikiti/languagetool-ruby.svg?&style=shield&circle-token=30f27cf5467c3b815e1ea6102e551fd4be05ca83)](https://circleci.com/gh/wikiti/languagetool-ruby.svg?&style=shield&circle-token=30f27cf5467c3b815e1ea6102e551fd4be05ca83)
+
 # languagetool
+
+<img src="https://gitlab.com/uploads/project/avatar/1507736/languagetool-ruby.png" width="200">
 
 A simple ruby wrapper for the LanguageTool HTTP API. This gem is only compatible with LanguageTool 3.4 and above.
 
