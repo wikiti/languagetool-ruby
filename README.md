@@ -2,8 +2,6 @@
 
 # languagetool
 
-<img src="https://gitlab.com/uploads/project/avatar/1507736/languagetool-ruby.png" width="200">
-
 A simple ruby wrapper for the LanguageTool HTTP API. This gem is only compatible with LanguageTool 3.4 and above.
 
 Please visit the this [link](https://languagetool.org/http-api/swagger-ui/#/default) for more information about the public LanguageTool HTTP API, and its allowed parameters.
