@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-ruby '2.2.4'
+ruby '3.3.1'
 
 gem 'rest-client'
 
 group :development do
   gem 'rdoc', '~> 3.12'
-  gem 'bundler', '~> 1.0'
-  gem 'jeweler', '~> 2.0.1'
+  gem 'bundler', '~> 2'
+  gem 'jeweler', '~> 2'
 end
 
 group :test do
