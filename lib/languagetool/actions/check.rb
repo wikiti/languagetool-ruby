@@ -7,7 +7,6 @@ module LanguageTool
       PARAMETERS = (REQUIRED_PARAMETERS + OPTIONAL_PARAMETERS).freeze
 
       def run
-        byebug
         response = api.premium? ? run_premium : run_free
         $languagetool_last_response = response
         Resources::Matches.new JSON.parse(response.body).merge('original' => options[:text])
