@@ -39,15 +39,13 @@ api = LanguageTool::API.new # Public LanguageTool API by default
 
 Please bear in mind that Ruby uses underscore names (`long_code`), while the LanguageTool API uses camelcase names (`longCode`).
 
-The gem works with the [premium API](https://languagetool.org/http-api/) too, just set the environment variables:
-```
-LANGUAGE_TOOL_USERNAME: 
-LANGUAGE_TOOL_API_KEY: 
-```
+The gem works with the [premium API](https://languagetool.org/http-api/) too, just set the username and the API key when initializing the API:
 
-You can also set them when instanciating the api.
 ```ruby
-LanguageTool::API.new username: '...', api_key: '...'
+LanguageTool::API.new(
+  username: '...',
+  api_key: '...'
+)
 ```
 
 ### Available languages

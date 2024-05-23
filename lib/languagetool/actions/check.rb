@@ -7,6 +7,7 @@ module LanguageTool
       PARAMETERS = (REQUIRED_PARAMETERS + OPTIONAL_PARAMETERS).freeze
 
       def run
+        byebug
         response = api.premium? ? run_premium : run_free
         $languagetool_last_response = response
         Resources::Matches.new JSON.parse(response.body).merge('original' => options[:text])
@@ -19,8 +20,8 @@ module LanguageTool
       end
 
       def run_premium
-        query_with_credentials = query.merge('username' => api.username, 'api_key' => api.api_key)
-        RestClient.post uri('check'), params: query_with_credentials
+        query_with_credentials = query.merge('username' => api.username, 'apiKey' => api.api_key)
+        RestClient.post uri('check'), query_with_credentials
       end
 
       def query
