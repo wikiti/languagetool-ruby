@@ -7,24 +7,22 @@ module LanguageTool
       PARAMETERS = (REQUIRED_PARAMETERS + OPTIONAL_PARAMETERS).freeze
 
       def run
-        response = api.premium? ? run_premium : run_free
+        response = RestClient.get uri('check'), params: query
         $languagetool_last_response = response
         Resources::Matches.new JSON.parse(response.body).merge('original' => options[:text])
       end
 
       protected
 
-      def run_free
-        RestClient.get uri('check'), params: query
-      end
-
-      def run_premium
-        query_with_credentials = query.merge('username' => api.username, 'apiKey' => api.api_key)
-        RestClient.post uri('check'), query_with_credentials
-      end
-
       def query
-        normalize_query(PARAMETERS.map { |k| [k, options[k]] })
+        normalize_query(parameters_with_common_query_params)
+      end
+
+      def parameters_with_common_query_params
+        PARAMETERS.map { |k| [k, options[k]] } + [
+          [:username, api.username],
+          [:api_key, api.api_key]
+        ]
       end
     end
   end
