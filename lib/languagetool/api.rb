@@ -1,6 +1,6 @@
 module LanguageTool
   class API
-    attr_reader :options, :username, :api_key
+    attr_reader :options
 
     DEFAULT_OPTIONS = {
       base_uri: 'https://languagetool.org/api/v2',
@@ -14,14 +14,6 @@ module LanguageTool
     # Define options getters
     DEFAULT_OPTIONS.each do |k, v|
       define_method(k) { options[k] }
-    end
-
-    def username
-      common_query_params.dig(:username)
-    end
-
-    def api_key
-      common_query_params.dig(:api_key)
     end
 
     # Define actions helpers

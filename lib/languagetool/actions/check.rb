@@ -15,14 +15,7 @@ module LanguageTool
       protected
 
       def query
-        normalize_query(parameters_with_common_query_params)
-      end
-
-      def parameters_with_common_query_params
-        PARAMETERS.map { |k| [k, options[k]] } + [
-          [:username, api.username],
-          [:api_key, api.api_key]
-        ]
+        normalize_query(PARAMETERS.map { |k| [k, options[k]] })
       end
     end
   end
