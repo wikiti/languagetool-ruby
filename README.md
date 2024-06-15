@@ -6,7 +6,7 @@ A simple ruby wrapper for the LanguageTool HTTP API. This gem is only compatible
 
 Please visit the this [link](https://languagetool.org/http-api/swagger-ui/#/default) for more information about the public LanguageTool HTTP API, and its allowed parameters.
 
-This project uses [`jeweler`](https://github.com/technicalpickles/jeweler) for managing and releasing this gem.
+This project uses [`juwelier`](https://github.com/technicalpickles/juwelier) for managing and releasing this gem.
 
 ## Installation
 

@@ -11,8 +11,8 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
-require 'jeweler'
-Jeweler::Tasks.new do |gem|
+require 'juwelier'
+Juwelier::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
   gem.name = "languagetool"
   gem.homepage = "https://github.com/wikiti/languagetool-ruby"
@@ -22,7 +22,7 @@ Jeweler::Tasks.new do |gem|
   gem.email = 'info@danielherzog.es'
   gem.authors = ['Daniel Herzog']
 end
-Jeweler::RubygemsDotOrgTasks.new
+Juwelier::RubygemsDotOrgTasks.new
 
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
