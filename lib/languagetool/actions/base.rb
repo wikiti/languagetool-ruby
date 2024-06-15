@@ -24,15 +24,12 @@ module LanguageTool
         "#{api.base_uri}/#{path}"
       end
 
-      def default_query
-        {}
-      end
-
       def underscore_to_camelcase(str)
         str.to_s.gsub(/_(.)/) { |match| "#{match[1].upcase}" }
       end
 
       def normalize_query(q)
+        q = api.common_query_params.merge(q)
         Hash[q.map { |k, v| [underscore_to_camelcase(k), v] }].select { |k, v| v }
       end
     end

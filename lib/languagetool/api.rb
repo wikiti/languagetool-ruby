@@ -3,7 +3,8 @@ module LanguageTool
     attr_reader :options
 
     DEFAULT_OPTIONS = {
-      base_uri: 'https://languagetool.org/api/v2'
+      base_uri: 'https://languagetool.org/api/v2',
+      common_query_params: {}
     }.freeze
 
     def initialize(options = {})
