@@ -29,7 +29,7 @@ module LanguageTool
       end
 
       def normalize_query(q)
-        q = api.common_query_params.merge(q)
+        q = api.common_query_params.merge(q.to_h)
         Hash[q.map { |k, v| [underscore_to_camelcase(k), v] }].select { |k, v| v }
       end
     end

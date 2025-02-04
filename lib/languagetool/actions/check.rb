@@ -8,7 +8,6 @@ module LanguageTool
 
       def run
         response = RestClient.get uri('check'), params: query
-        $languagetool_last_response = response
         Resources::Matches.new JSON.parse(response.body).merge('original' => options[:text])
       end
 

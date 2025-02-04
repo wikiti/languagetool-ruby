@@ -1,6 +1,6 @@
-require 'helper'
+require 'test_helper'
 
-class TestLanguages < Test::Unit::TestCase
+class LanguagesTest < Test::Unit::TestCase
   context 'the languages action' do
     setup do
       @api = LanguageTool::API.new

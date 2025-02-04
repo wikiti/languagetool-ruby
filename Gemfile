@@ -5,7 +5,7 @@ ruby '>= 3.0.0'
 gem 'rest-client'
 
 group :development do
-  gem 'rdoc', '~> 3.12'
+  gem 'rdoc', '>= 4'
   gem 'bundler', '~> 2'
   gem 'juwelier', '~> 2'
 end
