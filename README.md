@@ -1,4 +1,4 @@
-[![Gem Version badge](https://badge.fury.io/rb/languagetool.svg)](https://badge.fury.io/rb/languagetool) ![ruby tests badge](https://github.com/wikiti/languagetool-ruby/actions/workflows/test/badge.svg)
+[![Gem Version badge](https://badge.fury.io/rb/languagetool.svg)](https://badge.fury.io/rb/languagetool) ![ruby tests badge](https://github.com/wikiti/languagetool-ruby/actions/workflows/test.yml/badge.svg)
 
 # languagetool
 
