@@ -1,4 +1,4 @@
-[![Gem Version](https://badge.fury.io/rb/languagetool.svg)](https://badge.fury.io/rb/languagetool) [![CircleCI](https://circleci.com/gh/wikiti/languagetool-ruby.svg?&style=shield&circle-token=30f27cf5467c3b815e1ea6102e551fd4be05ca83)](https://circleci.com/gh/wikiti/languagetool-ruby)
+[![Gem Version badge](https://badge.fury.io/rb/languagetool.svg)](https://badge.fury.io/rb/languagetool) ![ruby tests badge](https://github.com/wikiti/languagetool-ruby/actions/workflows/test/badge.svg)
 
 # languagetool
 
